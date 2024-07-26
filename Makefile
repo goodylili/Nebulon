@@ -30,7 +30,7 @@ clean:
 
 # Push to GitHub
 push:
-	@echo "Pushing to GitHub..."
-	git add .
-	git commit -m "Committing changes"
+	@read -p "Enter commit message: " msg; \
+	git add .; \
+	git commit -m "$$msg"; \
 	git push origin main
